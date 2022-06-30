@@ -1,0 +1,101 @@
+@import "colors";
+
+.card {
+  background-color: white;
+  height: fit-content;
+  width: 40%;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  color: $dark-grayish-blue;
+  font-weight: 400;
+
+  &-image {
+    content: '';
+    background-image: url('../product-preview-card-component-main/product-preview-card-component-main/images/image-product-desktop.jpg');
+    width: 100%;
+    background-size: cover;
+    flex: 1;
+  }
+
+  &-content {
+
+    flex: 1;
+
+    .card-header {
+      margin: 20px 40px;
+
+      .card-subtitle {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1em;
+        font-size: 14px;
+      }
+
+      .card-title {
+        color: $very-dark-blue;
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+      }
+    }
+
+    .card-body {
+      margin: 20px 40px;
+      color: $very-dark-blue;
+      font-weight: 400;
+
+      .card-text {
+        margin-bottom: 1.5em;
+        font-size: 14px;
+        transition: font-size .5s;
+      }
+
+      .card-price {
+        display: flex;
+        align-items: center;
+
+        &-actual {
+          color: $dark-cyan;
+          font-weight: 700;
+          font-size: 2.5em;
+          font-family: 'Fraunces', serif;
+        }
+        &-previous {
+          text-decoration: line-through;
+          margin-left: 20%;
+        }
+
+        margin-bottom: 1em;
+      }
+    }
+
+    .card-footer {
+      margin: 20px 40px;
+      &-action {
+        color: $white;
+        background-color: $dark-cyan;
+        display: flex;
+        padding: 1em;
+        border-radius: 10px;
+        width: 100%;
+        justify-content: center;
+
+        img {
+          height: 14px;
+          width: 14px;
+          margin-right: 1em;
+        }
+
+        &:hover {
+          &~.card-text {
+            font-size: 16px;
+            transition: font-size .5s;
+          }
+          background-color: $very-dark-blue;
+        }
+      }
+    }
+  }
+}
